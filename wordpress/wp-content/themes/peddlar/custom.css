@@ -21,7 +21,7 @@ body {
 
 #head-wrapper {
 	height: 150px;
-	background-image: url("images/45-l.png");
+	background-image: url("images/45-ll.png");
 	margin-left: -1.618em;
 	margin-right: -1.618em;
 	padding-left: 1.618em;
@@ -41,15 +41,15 @@ body {
 	/*float: left;*/
 	margin-bottom: 0em;
 	margin-top: 0em;
-	width: 180px;
+	width: 285px;
 }
 
 #navigation {
-	background-image: url("images/45-l.png");
+	background-image: url("images/45-ll.png");
 }
 
 #navigation ul.nav > li.current_page_item > a {
-	background-image: url("images/45-l.png");
+	background-image: url("images/45-ll.png");
 }
 
 #navigation ul.nav ul {
@@ -58,7 +58,11 @@ body {
 
 
 #footer {
-	background-image: url("images/45-l.png");
+	background-image: url("images/45-ll.png");
+}
+
+.home .homepage-area #recent-products:first-child {
+	padding-top: 4.5em;
 }
 
 
@@ -66,7 +70,7 @@ body {
 	/* Desktop styles go here */
 
 	#header #logo{
-		margin-bottom: 1.25em;
+		margin-bottom: .25em;
 	}
 
 	#header .site-description + .nav.cart {
@@ -81,12 +85,12 @@ body {
 
 	#header .nav-toggle {
 		background: none;
-		background-image: url("images/45-l.png");
+		background-image: url("images/45-ll.png");
 	}
 
 	#head-wrapper {
 		/*height: 150px;*/
-		background-image: url("images/45-l.png");
+		background-image: url("images/45-ll.png");
 		margin-left: -1.618em;
 		margin-right: -1.618em;
 		padding: 1.618em;
@@ -131,8 +135,8 @@ Add styles inside the media query below that you only want to be applied to the 
 }
 
 #header #logo {
-	margin-top: .25em;
-	margin-bottom: -.25em;
+	margin-top: 0;
+	margin-bottom: -2em;
 }
 
 	/* Desktop styles go here */
