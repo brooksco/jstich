@@ -1,0 +1,647 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. Global dropdown styles
+2. Top Navigation
+3. Main navigation dropdown menus
+ -3.1 General dropdown menus
+4. Containers & Columns
+5. Footer widgets
+6. IE Fixes
+
+/*----------------------*/
+
+@import url(mixins.less);
+@import url(grid.less);
+
+/*----------------------*/
+
+@media only screen and (min-width: 800px) {
+
+	/* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+	ul.nav {
+	    position: relative;
+	    margin-bottom:0;
+	    li {
+	    	position: relative;
+	    	float: left;
+	    	zoom:1;
+	    	list-style: none;
+	    	a {
+	    		display: block;
+	    		padding:.541em 1em;
+	    		&:hover {
+	    			text-decoration: none;
+	    		}
+	    	}
+	    	&.parent { // Styles applied to all parent list items
+	    	}
+	    }
+	    /* LEVEL 2 */
+	    ul {
+	    	width:11.089em;
+	    	visibility: hidden;
+	    	position: absolute;
+	    	top:100%;
+	    	left: 0;
+	    	z-index: 9999;
+	    	margin:0;
+	    	li {
+	    		float: none;
+	    		a {
+	    			width: 100%;
+	    			display: inline-block;
+	    			.borderbox();
+	    		}
+	    		&.parent { // Styles applied to parent items in level 2
+	    		}
+	    	}
+	    }
+	    /* LEVEL 3 */
+	    ul ul {
+	    	left:100%;
+	    	top:0;
+	    	li {
+	    		&.parent { // Styles applied to parent items in level 3
+	    		}
+	    	}
+	    }
+	    li:hover > ul {
+	    	visibility: visible;
+	    }
+	}
+
+	/* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+	#top {
+	    margin: 0 -1.618em;
+	    padding:0 1.618em;
+	    border-bottom: 1px solid @bg_light - #0d0d0d;
+	    #top-nav {
+	    	display: block;
+	    	.column(12);
+	    }
+	    ul.nav {
+	    	font-size:.875em; // this adjusts the scale of the entire navigation and everything just works like magic
+	    	a {
+	    		color: @color_body + #555;
+	    		font-weight: 700;
+	    		&:hover {
+	    			color: @color_body;
+	    		}
+	    	}
+	    	> li { // The following styles are applied ONLY to the top level list items
+	    		border-left:1px solid @bg_light - #0d0d0d;
+	    		a {
+	    			&:hover {
+	    				// background: @bg_light + #111;
+	    				background-image: @hover_fabric;
+	    			}
+	    		}
+	    		&:hover {
+	    			// background: @bg_light + #111;
+	    			background-image: @hover_fabric;
+	    		}
+	    		&:last-child {
+	    			border-right:1px solid @bg_light - #0d0d0d;
+	    		}
+	    	}
+	    	/* LEVEL 2 */
+	    	ul {
+	    		background: @bg_light + #111;
+	    		border:1px solid @bg_light - #0d0d0d;
+	    		border-top:0;
+	    		left:-1px;
+	    		li {
+	    			a {
+	    			}
+	    		}
+	    	}
+	    	/* LEVEL 3 */
+	    	ul ul {
+	    		left:100%;
+	    	}
+	    }
+	}
+
+	/* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+	#navigation  {
+	    display:block !important;
+	    margin-bottom:4.236em;
+	    ul.nav {
+	    	> li { // The following styles are applied ONLY to the top level list items
+	    		> a {
+	    			padding:1.416em;
+	    			color: @color_body;
+	    			font-weight: 700;
+	    			&:hover {
+	    				// background: @bg_light - #060606;
+	    				background-image: @hover_fabric;
+	    				color: @color_body - #222;
+	    				.inset_box_shadow(0,.207em,0,0,@color_links);
+	    			}
+	    		}
+	    		&:hover {
+	    			// background: @bg_light - #060606;
+	    			> a {
+	    				// background: @bg_light - #060606;
+	    				background-image: @hover_fabric;
+	    				color: @color_body - #222;
+	    				.inset_box_shadow(0,.207em,0,0,@color_links);
+	    			}
+	    		}
+	    	}
+	    	> li.current_page_item, li.current_page_parent, /*li.current-menu-ancestor, */li.current-cat, li.current-menu-item {
+	    		> a {
+	    			// background: @bg_light;
+	    			background-image: @hover_fabric;
+    				color: @color_body - #222;
+    				.inset_box_shadow(0,.207em,0,0,@color_body);
+    				&:hover {
+    					// background: @bg_light - #060606;;
+    					background-image: @hover_fabric;
+    				}
+	    		}
+	    		&:hover > a {
+	    			// background:@bg_light - #060606;
+	    			background-image: @hover_fabric;
+	    		}
+	    	}
+
+	    	/* LEVEL 2 */
+	    	ul {
+	    		background: @bg_light - #060606;
+	    		padding:1em 0;
+	    		left:0;
+	    		li {
+	    			font-size:.875em;
+	    			a {
+	    				padding:.618em 1.416em;
+	    				font-weight: normal;
+	    				color: @color_body;
+	    				// background: @bg_light - #060606;
+	    				&:hover {
+	    					// background: @color_body;
+	    					background-image: @hover_fabric_dark;
+	    					// color: @bg_light;
+	    					color: black;
+	    				}
+	    			}
+	    		}
+	    	}
+	    	/* LEVEL 3 */
+	    	ul ul {
+	    		//top:-1em;
+	    		left:100%; // reapply left 100% as we're offsetting the first child
+	    		li {
+	    			font-size:1em;
+	    		}
+	    	}
+	    	li:hover > ul {
+	    	}
+	    }
+	    .widget_product_search {
+	    	background: @bg_light - #060606;
+	    	form {
+	    		border: 0;
+	    	}
+	    	input#s {
+	    		padding:1.416em;
+	    	}
+	    	.search-submit, #searchsubmit {
+	    		top:1em;
+	    		right:1em;
+	    	}
+	    }
+	}
+	// Hide the nav toggle link in desktop orientation
+	.nav-toggle { display: none !important; }
+
+	/* 4. CONTAINERS & COLUMNS */
+	.wrapper, .main-nav-inner, .footer-inner, #top .col-full, .footer-shop-content {
+		max-width:66.498em;
+	    margin:0 auto;
+	}
+	.layout-left-content {
+		#sidebar {
+			float: right;
+		}
+	}
+	#header {
+		padding-top:1.618em;
+		padding-bottom:1.618em;
+		padding-left:0;
+		padding-right:0;
+		background: none;
+		border: 0;
+		margin-bottom:0;
+		.column(12);
+	    hgroup {
+	        .clearfix;
+	    }
+	    #logo {
+	    	margin:1.618em 0 0 0;
+	    }
+	    .site-description {
+	    	margin:0 0 1.618em;
+	    	& + .nav.cart {
+	    		margin-bottom:0;
+	    	}
+	    }
+	    ul.rss {
+	        margin-right:0;
+	        padding-right:0;
+	        li {
+	            border-right:0;
+	        }
+	    }
+	    ul.cart {
+	        li {
+	            border-left:1px solid @border_main;
+	        }
+	    }
+	}
+	#navigation {
+		margin-left:-1.618em;
+		margin-right:-1.618em;
+		padding:0;
+		line-height: 1.2;
+		#main-nav {
+			.column(9);
+			width:auto;
+		}
+		.widget_product_search {
+			margin:0;
+			.column(3);
+			float: right;
+			display: block;
+			clear:none;
+			form {
+				background: none;
+			}
+		}
+		ul {
+			ul.sub-menu {
+				margin-left:0;
+			}
+		}
+	}
+	#breadcrumbs {
+		.column(12);
+	}
+	#main {
+	    .column(8);
+	}
+	#main.fullwidth, .layout-full #main, #main.full-width /*.col-full*/ {
+	    .column(12);
+	}
+	#sidebar {
+	    margin-top: 0;
+	    .column(3);
+	    font-size:.875em;
+	    .widget {
+	    	margin-bottom: 4.236em;
+	    	h2:first-of-type {
+	    		font-size:1em;
+	    	}
+	    }
+	}
+	#main, #sidebar {
+		margin-bottom:4.236em;
+	}
+	.entry img {
+	    max-width: 100%;
+	}
+	.layout-full .entry img {
+	    max-width: 100%;
+	}
+	.layout-right-content {
+	    #main  {
+	    	float: right;
+	    }
+	    #sidebar  {
+	    	float: left;
+	    }
+	}
+	.col-left {
+	    float: left;
+	}
+	.col-right {
+	    float: right;
+	}
+	.page-template-template-contact-php {
+	    .location-twitter  {
+	    	.col-left  {
+	    		float: left;
+	    	}
+	    	#office-location {
+	    	    width: 48%;
+	    	    margin: 0 1em 0 0;
+	    	}
+	    	.contact-social  {
+	    	    float: left;
+	    	    width: 48%;
+	    	    #twitter  {
+	    	    	margin: 0;
+	    	    }
+	    	}
+	    }
+	}
+
+	/* Timeline */
+
+	.archives_list {
+		.date {
+			width:22.5%;
+			display: inline-block;
+		}
+		.linked {
+			width:42%;
+			display: inline-block;
+		}
+		.comments {
+			width:28.5%;
+			display: inline-block;
+			a {
+				padding-left:1.416em;
+			}
+		}
+	}
+
+	/* Contact */
+
+	.page-template-template-contact-php {
+		#location, #twitter-connect {
+			width: 48%;
+			float: left;
+		}
+		#twitter-connect {
+			float: right;
+		}
+	}
+
+	/* 5. FOOTER WIDGETS */
+	.layout-full.home {
+		.widget {
+			&:first-child {
+				padding-top:1.618em;
+			}
+		}
+	}
+	#footer-widgets {
+		.fullwidth-widgets {
+			.widget {
+				padding:5.997em 0 0 0;
+			}
+		}
+	}
+	.fullwidth-widgets, div.home, div.business {
+		.widget {
+			padding:5.997em 0;
+			&.widget_woothemes_features, &.widget_woothemes_testimonials, &.widget_woo_recent_products {
+				width:100%;
+				margin-left:0;
+				margin-right:0;
+			}
+			&.widget_woo_recent_products {
+				padding-bottom:0;
+				> h2 {
+					font-size: 2.291em;
+					line-height: 1.416em;
+				}
+			}
+			&.widget_woothemes_features {
+				background: @bg_light - #0d0d0d;
+				.clearfix;
+				clear:both;
+				-webkit-box-shadow:
+					50em 0 0 0 @bg_light - #0d0d0d,
+					-50em 0 0 0 @bg_light - #0d0d0d;
+				box-shadow:
+					50em 0 0 0 @bg_light - #0d0d0d,
+					-50em 0 0 0 @bg_light - #0d0d0d;
+				.feature {
+					.column(4);
+					text-align: center;
+					img, h3, .feature-content {
+						display: block;
+						float: none;
+						width:100%;
+						margin:0;
+					}
+					img {
+						margin:0 auto 1em;
+						float: none;
+						display: block;
+						width:auto;
+					}
+					h3 {
+						margin:0;
+						border:0;
+					}
+				}
+			}
+			&.widget_woothemes_testimonials {
+				.quote {
+					.column(6);
+					.quote-content {
+						.row(6);
+						margin-bottom:1.618em;
+						.avatar-link {
+							.column(1,6);
+							img {
+								width:100%;
+								height: auto;
+								.border_radius(100%);
+								padding:.334em;
+								background: @bg_light + #111;
+							}
+						}
+						.testimonials-text {
+							.column(5,6);
+						}
+						cite.author {
+							display: block;
+							font-style: normal;
+							font-weight: bold;
+							.excerpt, .url {
+								font-weight: normal;
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// Footer shop link
+	.footer-shop {
+		margin-bottom:0;
+		.inner {
+			padding:5.997em 0;
+			.clearfix;
+			.footer-shop-content {
+				p {
+					.column(9);
+					text-align: left;
+					margin-bottom:0;
+					font-size:1.618em;
+				}
+				.button {
+					.column(3);
+					.borderbox;
+				}
+			}
+		}
+	}
+	#footer-widgets {
+
+	    .block {
+	    	margin-right:3.8%;
+	    	float: left;
+	    	font-size:.875em;
+	    }
+	    &.col-1 {
+	    	.block {
+	    		width: 100%;
+	    		float: none;
+	    	}
+	    	.footer-widget-1 {
+	    		margin-right:0;
+	    	}
+	    }
+	    &.col-2 {
+	    	.block {
+	    		.column(6);
+	    	}
+	    	.footer-widget-2 {
+	    		margin-right:0;
+	    	}
+	    }
+	    &.col-3 {
+	    	.block {
+	    		.column(4);
+	    	}
+	    	.footer-widget-3 {
+	    		margin-right:0;
+	    	}
+	    }
+	    &.col-4 {
+	    	.block {
+	    		.column(3);
+	    	}
+	    	.footer-widget-4 {
+	    		margin-right:0;
+	    	}
+	    }
+	    .widget {
+	    	h3 {
+	    		text-transform: uppercase;
+	    		font-size:.857em;
+	    	}
+	    }
+	}
+
+	#footer {
+
+		.col-left, .col-right {
+			.column(6);
+		}
+		.col-right {
+			text-align: right;
+		}
+	}
+
+	/* Homepage */
+	.home {
+		.flexslider {
+			margin-top:-4.236em;
+			li.slide {
+				.slide-content {
+					width:67%;
+					left:17%;
+					position:absolute;
+					top:5.997em;
+					display: block;
+					header, .entry {
+						.column(8);
+						display: block;
+						clear:left;
+						background: rgba(0,0,0,0.8);
+						color: #fff;
+						padding:1.618em;
+						.borderbox;
+					}
+					header {
+
+						max-width:42.5%;
+						h1 {
+							color: #fff;
+							margin:0;
+						}
+					}
+					.entry {
+						p:last-child {
+							margin-bottom:0;
+						}
+					}
+				}
+			}
+		}
+		#recent-products {
+			.column(12);
+		}
+	}
+
+	/* 6. IE FIXES */
+
+	.ie7 {
+	    #top-nav {
+	    	position: relative;
+	    	z-index: 9999999;
+	    }
+	    #header {
+	    	position: relative;
+	    	z-index: 9999999;
+	    }
+	}
+
+	.ie8 {
+		.flexslider li.slide .slide-content header, .flexslider li.slide .slide-content .entry, .footer-shop .inner, .flex-direction-nav a {
+			background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGA4AwAA1gDOIG8pFwAAAABJRU5ErkJggg==);
+		}
+		ul.products li.product .product-details {
+			display: none;
+		}
+		ul.products li.product:hover .product-details {
+			display: block;
+			background: @color_links;
+		}
+		#searchform .search-submit, #searchform #searchsubmit {
+			background: url('../images/ico-search-ie8.png') no-repeat center;
+		}
+	}
+
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+.home {
+	.flexslider {
+		li.slide {
+			.slide-content {
+				width:90%;
+				left:8%;
+				font-size:.875em;
+			}
+		}
+	}
+}
+}

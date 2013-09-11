@@ -1,0 +1,35 @@
+*** Peddlar Changelog ***
+
+2013.08.15 - version 1.0.6
+ * includes/theme-woocommerce.php - woo_cart_link() now uses get_cart_contents_count(). Tweaked how styles are dequeued for WooCommerce 2.1 compatibility.
+ * includes/theme-actions.php - Custom typography settings work properly for post titles.
+
+2013.08.06 - version 1.0.5
+ * includes/theme-woocommerce.php - Product photos appear in lightbox when theme lightbox script active. Better checks before calling WooCommerce sidebar.
+ * includes/theme-actions.php - Prevents Page/Post Title typography settings from affecting the Site Title.
+
+2013.07.29 - version 1.0.4
+ * includes/featured-slider.php - Don't display empty slide header when title is blank but slide URL is not. Made the slide media dimensions filterable.
+
+2013.07.24 - version 1.0.3
+ * includes/theme-woocommerce.php - Updated how WooCommerce styles are disabled for 2.1 compatibility. Updated Upsell / Related Prodocut display for 2.1 compatibility.
+ * css/woocommerce.css - Fixes add review form.
+ * includes/js/enable-lightbox.js - enables lightbox for galleries within posts/pages.
+
+2013.06.13 - version 1.0.2
+ * includes/featured-slider.php - Don't display empty slide content box is no content is present.
+ * style.css
+   css/woocommerce.css
+   css/layout.css - Footer callout now styled when WooCommerce isn't activated.
+ * includes/theme-fuctions.php - WPML support for featured slider
+
+2013.05.21 - version 1.0.1
+ * style.css - Fixed homepage layout bug where recent products title overlaps slider pagination buttons.
+ * /css/layout.css - Tweaks slide-content layout on 1200px and below browser width.
+ * /styles/*.css - Fixed product title background colour in mobile orientation.
+ * index.php
+   /includs/recent-products.php
+   /includes/promo-message.php - Theme option text output run through stripslashes()
+
+2013.05.09 - version 1.0.0
+ * First release!

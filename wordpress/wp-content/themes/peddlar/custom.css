@@ -1,0 +1,139 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. */
+
+
+/* 
+GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+body {
+	background-color: white;
+	/*background-image: url("images/45-l.png");*/
+}
+
+#head-wrapper {
+	height: 150px;
+	background-image: url("images/45-l.png");
+	margin-left: -1.618em;
+	margin-right: -1.618em;
+	padding-left: 1.618em;
+	padding-right: 1.618em;
+	/*box-shadow: 0px 1px 4px #f7f7f7;*/
+	/*border-bottom: solid 1px #f7f7f7;*/
+	z-index: 1000;
+}
+
+#header {
+	margin-bottom: 0em;
+	padding-bottom: 1em;
+	padding-top: 1.25em;
+}
+
+#header #logo {
+	/*float: left;*/
+	margin-bottom: 0em;
+	margin-top: 0em;
+	width: 180px;
+}
+
+#navigation {
+	background-image: url("images/45-l.png");
+}
+
+#navigation ul.nav > li.current_page_item > a {
+	background-image: url("images/45-l.png");
+}
+
+#navigation ul.nav ul {
+	background-image: url("images/45.png");
+}
+
+
+#footer {
+	background-image: url("images/45-l.png");
+}
+
+
+@media only screen and (max-width: 800px) {
+	/* Desktop styles go here */
+
+	#header #logo{
+		margin-bottom: 1.25em;
+	}
+
+	#header .site-description + .nav.cart {
+		float: right;
+		margin-top: -6em;
+	}
+
+	#header {
+		padding-top: 0;
+		background: none;
+	}
+
+	#header .nav-toggle {
+		background: none;
+		background-image: url("images/45-l.png");
+	}
+
+	#head-wrapper {
+		/*height: 150px;*/
+		background-image: url("images/45-l.png");
+		margin-left: -1.618em;
+		margin-right: -1.618em;
+		padding: 1.618em;
+		/*margin-bottom: 1.878em;*/
+		/*margin-bottom: 3em;*/
+	}
+
+	#navigation {
+		/*margin-top: -1.5em;*/
+	}
+
+	#navigation #main-nav {
+		/*margin-bottom: 2em;*/
+	}
+
+	#featured-slider {
+		/*margin-top: -1.15em;*/
+	}
+
+	#main {
+		margin-top: 1.5em;
+	}
+
+
+}
+
+
+/* 
+DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+@media only screen and (min-width: 800px) {
+
+	#navigation #main-nav {
+	float: right;
+	margin-top: -4em;
+}
+
+#header .cart-contents {
+	top: 1em;
+}
+
+#header #logo {
+	margin-top: .25em;
+	margin-bottom: -.25em;
+}
+
+	/* Desktop styles go here */
+}

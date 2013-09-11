@@ -1,0 +1,214 @@
+@import url(http://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+$lighter-gray: #f6f6f6;
+$light-gray: #eee;
+$medium-gray: #dadada;
+$mediumer-gray: #6d6e70;
+$dark-gray: #333;
+$darker-gray: #1a1a1a;
+
+$pea-green: #77cb6d;
+$dark-green: #49ac3d;
+
+
+body {
+	// background-color: $light-gray;
+	font-family: 'Open Sans';
+	color: $dark-gray;
+	// background-image:url('img/sos.png');
+	// background-color: $lighter-gray;
+}
+
+#main {
+	max-width: 1200px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2em;
+	// background-color: white;
+	// padding-left: 10%;
+	// padding-right: 10%;
+
+}
+
+#hero-image {
+	margin-bottom: 2em;
+	background-position: center middle;
+background-size: cover;
+background-image: url(/jstitch/wordpress/wp-content/themes/jstitch/img/green.jpg);
+height: 450px;
+}
+
+.clean-header {
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+.top-nav {
+	padding-left: 10%;
+	padding-top: .75em;
+	padding-bottom: .75em;
+	// background-image:url('img/vertical_cloth.png');
+	// background-image:url('img/squares.png');
+	// background-color: $dark-gray;
+	padding-right: 10%;
+	// max-width: 1200px;
+}
+
+#header-cart {
+	float: right;
+	display: inline;
+	text-align: center;
+	background-color: $pea-green;
+
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: white;
+	}
+	width: 80px;
+	padding-top: 30px;
+	line-height: 20px;
+	padding-bottom: 30px;
+	margin-top: .5em;
+	border-radius: 40px;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+#header-cart:hover {
+	background-color: $dark-green;
+}
+
+#header-logo {
+	width: 160px;
+	min-width: 160px;
+	// vertical-align: middle;
+}
+
+.site-nav {
+	// margin-top: 2.25em;
+	width: 100%;
+	// float: right;
+	font-weight: lighter;
+	text-transform: uppercase;
+	text-align: center;
+	// background-color: $light-gray; 
+	// background-color: $dark-gray;
+	// background-image:url('img/vertical_cloth.png');
+	background-image:url('img/45-l.png');
+	padding-left: 10%;
+	padding-right: 10%;
+
+	ul {
+		margin: 0;
+
+
+		list-style: none;
+		position: relative;
+		// display: inline-table;
+
+		li {
+			float: right;
+			box-sizing: border-box;
+			// border: 2px solid transparent;
+
+			// border: 2px solid black;
+
+			a {
+				color: $darker-gray;
+				display: block;
+				padding-left: 1.5em;
+				padding-right: 1.5em;
+				padding-top: 1em;
+				padding-bottom: 1em;
+				text-decoration: none;
+			}
+		}
+
+		li:hover {
+			background-color: $darker-gray;
+			// border: 2px solid $pea-green;
+			// outline: 3px solid $pea-green;
+			// box-sizing: border-box;
+
+			ul {
+				display: block;
+			}
+
+			a {
+				color: white;
+			}
+		}
+
+		ul {
+			margin-left: 0;
+			margin-right: 0;
+			z-index: 1000;
+			display: none;
+			background-color: #5f6975;
+			position: absolute;
+			top: 100%;
+
+			li {
+				float: none;
+				border-top: 1px solid #6b727c;
+				border-bottom: 1px solid #575f6a;
+				position: relative;
+
+				a {
+					// padding: 15px 40px;
+				//color: #fff;
+			}
+
+			a:hover {
+				background: #4b545f;
+			}
+		}
+	}
+}
+
+
+
+}
+
+
+
+footer {
+	// background-color: $light-gray;
+	// background-image:url('img/sos.png');
+	background-image:url('img/45-l.png');
+	padding-top: 4em;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 4em;
+
+	margin-top: 5em;
+
+	text-align: center;
+	color: gray;
+	font-weight: lighter;
+	font-size: .8em;
+
+	p {
+		margin-bottom: 1.5em;
+	}
+
+	a {
+		text-decoration: none;
+		color: gray;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+
+
+
+
+
+
