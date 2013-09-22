@@ -36,6 +36,9 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
 	</div><!-- /.wrapper -->
 
+
+
+
 	<?php woo_featured_slider_loader(); ?>
 
 	<div class="wrapper">

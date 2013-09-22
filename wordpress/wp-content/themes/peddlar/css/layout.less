@@ -103,13 +103,13 @@ INDEX
 	    		border-left:1px solid @bg_light - #0d0d0d;
 	    		a {
 	    			&:hover {
-	    				// background: @bg_light + #111;
-	    				background-image: @hover_fabric;
+	    				background: @bg_light + #111;
+	    				// background-image: @hover_fabric;
 	    			}
 	    		}
 	    		&:hover {
-	    			// background: @bg_light + #111;
-	    			background-image: @hover_fabric;
+	    			background: @bg_light + #111;
+	    			// background-image: @hover_fabric;
 	    		}
 	    		&:last-child {
 	    			border-right:1px solid @bg_light - #0d0d0d;
@@ -137,6 +137,7 @@ INDEX
 	#navigation  {
 	    display:block !important;
 	    margin-bottom:4.236em;
+	    background: white;
 	    ul.nav {
 	    	> li { // The following styles are applied ONLY to the top level list items
 	    		> a {
@@ -145,16 +146,18 @@ INDEX
 	    			font-weight: 700;
 	    			&:hover {
 	    				// background: @bg_light - #060606;
-	    				background-image: @hover_fabric;
+	    				// background: white;
+	    				// background-image: @hover_fabric;
 	    				color: @color_body - #222;
 	    				.inset_box_shadow(0,.207em,0,0,@color_links);
 	    			}
 	    		}
 	    		&:hover {
-	    			// background: @bg_light - #060606;
+	    			background: @bg_light - #060606;
 	    			> a {
-	    				// background: @bg_light - #060606;
-	    				background-image: @hover_fabric;
+	    				// this is the main hover behavior
+	    				background: @bg_light - #060606;
+	    				// background-image: @hover_fabric;
 	    				color: @color_body - #222;
 	    				.inset_box_shadow(0,.207em,0,0,@color_links);
 	    			}
@@ -163,17 +166,18 @@ INDEX
 	    	> li.current_page_item, li.current_page_parent, /*li.current-menu-ancestor, */li.current-cat, li.current-menu-item {
 	    		> a {
 	    			// background: @bg_light;
-	    			background-image: @hover_fabric;
+	    			background: white;
+	    			// background-image: @hover_fabric;
     				color: @color_body - #222;
     				.inset_box_shadow(0,.207em,0,0,@color_body);
     				&:hover {
-    					// background: @bg_light - #060606;;
-    					background-image: @hover_fabric;
+    					background: @bg_light - #060606;;
+    					// background-image: @hover_fabric;
     				}
 	    		}
 	    		&:hover > a {
-	    			// background:@bg_light - #060606;
-	    			background-image: @hover_fabric;
+	    			background:@bg_light - #060606;
+	    			// background-image: @hover_fabric;
 	    		}
 	    	}
 
@@ -190,10 +194,10 @@ INDEX
 	    				color: @color_body;
 	    				// background: @bg_light - #060606;
 	    				&:hover {
-	    					// background: @color_body;
-	    					background-image: @hover_fabric_dark;
-	    					// color: @bg_light;
-	    					color: black;
+	    					background: @color_body;
+	    					// background-image: @hover_fabric_dark;
+	    					color: @bg_light;
+	    					// color: black;
 	    				}
 	    			}
 	    		}
@@ -568,9 +572,11 @@ INDEX
 			li.slide {
 				.slide-content {
 					width:67%;
+					// width:100%;
 					left:17%;
 					position:absolute;
-					top:5.997em;
+					// top:5.997em;
+					top:8.997em;
 					display: block;
 					header, .entry {
 						.column(8);
@@ -583,14 +589,17 @@ INDEX
 					}
 					header {
 
-						max-width:42.5%;
+						// max-width:42.5%;
+						max-width: 50%;
 						h1 {
 							color: #fff;
 							margin:0;
 						}
 					}
 					.entry {
+						width:75%;
 						p:last-child {
+							font-size: 1.25em;
 							margin-bottom:0;
 						}
 					}

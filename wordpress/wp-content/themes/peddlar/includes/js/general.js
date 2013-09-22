@@ -3,6 +3,14 @@
 /*-----------------------------------------------------------------------------------*/
 jQuery(document).ready(function(){
 
+	
+	jQuery('.page-item-4').attr("data-toggle", "tooltip");
+	// jQuery('.page-item-4').attr("data-delay", '{"show":"200", "hide":"200"}');		
+	jQuery('.page-item-4').attr("title", "Knock yourself out");	
+	jQuery('.page-item-4').addClass("nav-tooltip");	
+
+	jQuery('.nav-tooltip').tooltip();
+
 	// Table alt row styling
 	jQuery( '.entry table tr:odd' ).addClass( 'alt-table-row' );
 

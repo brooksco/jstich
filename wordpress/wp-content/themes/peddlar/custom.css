@@ -14,14 +14,23 @@ GLOBAL STYLES
 ----------------
 Add styles beneath this line that you want to be applied across your entire site */
 
+/*#efefef*/
+
+@import url("includes/css/bootstrap.css");
+
 body {
 	background-color: white;
 	/*background-image: url("images/45-l.png");*/
 }
 
+#content {
+	margin-top: 1.5em;
+}
+
 #head-wrapper {
-	height: 150px;
-	background-image: url("images/45-ll.png");
+	height: 120px;
+	/*background-image: url("images/45-ll.png");*/
+	/*background-color: gray;*/
 	margin-left: -1.618em;
 	margin-right: -1.618em;
 	padding-left: 1.618em;
@@ -32,33 +41,76 @@ body {
 }
 
 #header {
-	margin-bottom: 0em;
+	margin-top: 0em;
+	margin-bottom: -2em;
 	padding-bottom: 1em;
-	padding-top: 1.25em;
+	padding-top: 0em;
 }
 
 #header #logo {
-	/*float: left;*/
 	margin-bottom: 0em;
-	margin-top: 0em;
-	width: 285px;
+	margin-top: 1.25em;
+	width: 220px;
 }
 
+#sidebar {
+	margin-top: 2.5em;
+}
+
+
+
+
+
+
+
+#featured-slider {
+	z-index: -1;
+	margin-top: -9em;
+}
+
+
+.home .flexslider li.slide .slide-content {
+	/*top: 9em;*/
+}
+
+
+
+
+
+#navigation #main-nav {
+	margin-top: -4em;
+	/*background: transparent;*/
+}
+
+
+
 #navigation {
-	background-image: url("images/45-ll.png");
+	/*background-image: url("images/45-ll.png");*/
+	/*background-color: white;*/
+	/*height: 7px;*/
+	background: transparent;
+	/*margin-top: -1.5em;*/
+	margin-bottom: 0em;
+
+}
+
+#navigation ul.nav > li > a {
+	/*color: white;*/
+	font-weight: 400;
+	font-size: 1.05em;
 }
 
 #navigation ul.nav > li.current_page_item > a {
-	background-image: url("images/45-ll.png");
+	/*background-image: url("images/45-ll.png");*/
+	/*background-color: white;*/
 }
-
-#navigation ul.nav ul {
-	background-image: url("images/45.png");
-}
-
 
 #footer {
-	background-image: url("images/45-ll.png");
+	/*background-image: url("images/45-ll.png");*/
+	background-color: #333;
+	padding-top: 4em;
+	padding-bottom: 6em;
+	color: white;
 }
 
 .home .homepage-area #recent-products:first-child {
@@ -70,6 +122,7 @@ body {
 	/* Desktop styles go here */
 
 	#header #logo{
+		margin-top: -.5em;
 		margin-bottom: .25em;
 	}
 
@@ -85,12 +138,12 @@ body {
 
 	#header .nav-toggle {
 		background: none;
-		background-image: url("images/45-ll.png");
+		/*background-image: url("images/45-ll.png");*/
 	}
 
 	#head-wrapper {
 		/*height: 150px;*/
-		background-image: url("images/45-ll.png");
+		/*background-image: url("images/45-ll.png");*/
 		margin-left: -1.618em;
 		margin-right: -1.618em;
 		padding: 1.618em;
@@ -99,7 +152,7 @@ body {
 	}
 
 	#navigation {
-		/*margin-top: -1.5em;*/
+		margin-top: -1.5em;
 	}
 
 	#navigation #main-nav {
@@ -127,16 +180,15 @@ Add styles inside the media query below that you only want to be applied to the 
 
 	#navigation #main-nav {
 	float: right;
-	margin-top: -4em;
+	/*margin-top: -4em;*/
 }
 
 #header .cart-contents {
-	top: 1em;
+	top: 1.25em;
 }
 
 #header #logo {
-	margin-top: 0;
-	margin-bottom: -2em;
+	
 }
 
 	/* Desktop styles go here */

@@ -1,0 +1,187 @@
+@import url(mixins.less);
+@import url(grid.less);
+
+/*----------------------*/
+
+@media only screen and (min-width: 800px) {
+
+	/* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+	ul.nav {
+	    li {
+	    	a {
+	    		&:hover {
+	    		}
+	    	}
+	    	&.parent { // Styles applied to all parent list items
+	    	}
+	    }
+	    /* LEVEL 2 */
+	    ul {
+	    	
+	    	li {
+	    		
+	    		a {
+	    			
+	    		}
+	    		&.parent { // Styles applied to parent items in level 2
+	    		}
+	    	}
+	    }
+	    /* LEVEL 3 */
+	    ul ul {
+	    	
+	    	li {
+	    		&.parent { // Styles applied to parent items in level 3
+	    		}
+	    	}
+	    }
+	    li:hover > ul {
+	    	
+	    }
+	}
+
+	/* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+	#top {
+	   
+	    #top-nav {
+	    	
+	    }
+	    ul.nav {
+	    	
+	    	a {
+	    		
+	    		&:hover {
+	    			
+	    		}
+	    	}
+	    	> li { // The following styles are applied ONLY to the top level list items
+	    		
+	    		a {
+	    			&:hover {
+	    			
+	    			}
+	    		}
+	    		&:hover {
+	    			
+	    		}
+	    		&:last-child {
+	    			
+	    		}
+	    	}
+	    	/* LEVEL 2 */
+	    	ul {
+	    		
+	    		li {
+	    			a {
+	    			}
+	    		}
+	    	}
+	    	/* LEVEL 3 */
+	    	ul ul {
+	    		
+	    	}
+	    }
+	}
+
+	/* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+	#navigation  {
+	   
+	    ul.nav {
+	    	
+	    	> li { // The following styles are applied ONLY to the top level list items
+	    		> a {
+	    			// Main button links
+	    			color: white;
+	    			&:hover {
+	    				background-color: transparent;
+	    				background: rgba(0, 0, 0, 0.8);
+	    			}
+	    		}
+	    		&:hover {
+	    			background-color: transparent;
+	    			// background: rgba(0, 0, 0, 0.8);
+	    			color: white;
+	    			> a {
+	    					// background-color: transparent;
+	    					background: rgba(0, 0, 0, 0.8);
+	    					color: white;
+	    			}
+	    		}
+	    	}
+	    	> li.current_page_item, li.current_page_parent, /*li.current-menu-ancestor, */li.current-cat, li.current-menu-item {
+	    		> a {
+	    			
+    				&:hover {
+    					
+    				}
+	    		}
+	    		&:hover > a {
+	    			
+	    		}
+	    	}
+
+	    	/* LEVEL 2 */
+	    	ul {
+	    		background-color: transparent;
+	    		background: rgba(0, 0, 0, 0.8);
+	    		
+	    		li {
+	    			
+	    			a {
+	    				// sub list color
+	    				// color: white;
+	    				color: #999;
+	    				&:hover {
+	    					background-color: transparent;
+	    					background: rgba(0, 0, 0, 0.8);
+	    				}
+	    			}
+	    		}
+	    	}
+	    	/* LEVEL 3 */
+	    	ul ul {
+	    		
+	    		
+	    		li {
+	    			color: white;
+	    		}
+	    	}
+	    	li:hover > ul {
+	    		background-color: transparent;
+	    		background: rgba(0, 0, 0, 0.8);
+
+	    	}
+	    }
+	}
+
+	/* Homepage */
+	.home {
+		.flexslider {
+			
+			li.slide {
+				.slide-content {
+					
+					margin-top: 5em;
+					
+					header, .entry {
+						
+					}
+					header {
+
+						
+						h1 {
+							
+						}
+					}
+					.entry {
+						
+						p:last-child {
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

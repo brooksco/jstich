@@ -39,7 +39,16 @@ if ( is_woocommerce_activated() ) {
 
 
 
+function load_my_scripts()
+{
 
+    wp_register_script('myscript', get_template_directory_uri().'/includes/js/bootstrap.js', array('jquery') );  
+    wp_enqueue_script('myscript');  
+
+
+	// wp_enqueue_script( 'custom-script', '/js/custom-min.js' );
+}
+add_action( 'wp_enqueue_scripts', 'load_my_scripts' );
 
 
 

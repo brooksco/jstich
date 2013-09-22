@@ -277,10 +277,10 @@ body:after {
     border-left: 1px solid #efefef;
   }
   #top ul.nav > li a:hover {
-    background-image: url("../images/45.png");
+    background: #ffffff;
   }
   #top ul.nav > li:hover {
-    background-image: url("../images/45.png");
+    background: #ffffff;
   }
   #top ul.nav > li:last-child {
     border-right: 1px solid #efefef;
@@ -298,6 +298,7 @@ body:after {
   #navigation {
     display: block !important;
     margin-bottom: 4.236em;
+    background: white;
   }
   #navigation ul.nav {
     /* LEVEL 2 */
@@ -311,13 +312,15 @@ body:after {
     font-weight: 700;
   }
   #navigation ul.nav > li > a:hover {
-    background-image: url("../images/45.png");
     color: #252525;
     box-shadow: inset 0 0.207em 0 0 #77cb6d;
     -webkit-box-shadow: inset 0 0.207em 0 0 #77cb6d;
   }
+  #navigation ul.nav > li:hover {
+    background: #f6f6f6;
+  }
   #navigation ul.nav > li:hover > a {
-    background-image: url("../images/45.png");
+    background: #f6f6f6;
     color: #252525;
     box-shadow: inset 0 0.207em 0 0 #77cb6d;
     -webkit-box-shadow: inset 0 0.207em 0 0 #77cb6d;
@@ -326,7 +329,7 @@ body:after {
   #navigation ul.nav li.current_page_parent > a,
   #navigation ul.nav li.current-cat > a,
   #navigation ul.nav li.current-menu-item > a {
-    background-image: url("../images/45.png");
+    background: white;
     color: #252525;
     box-shadow: inset 0 0.207em 0 0 #474747;
     -webkit-box-shadow: inset 0 0.207em 0 0 #474747;
@@ -335,13 +338,13 @@ body:after {
   #navigation ul.nav li.current_page_parent > a:hover,
   #navigation ul.nav li.current-cat > a:hover,
   #navigation ul.nav li.current-menu-item > a:hover {
-    background-image: url("../images/45.png");
+    background: #f6f6f6;
   }
   #navigation ul.nav > li.current_page_item:hover > a,
   #navigation ul.nav li.current_page_parent:hover > a,
   #navigation ul.nav li.current-cat:hover > a,
   #navigation ul.nav li.current-menu-item:hover > a {
-    background-image: url("../images/45.png");
+    background: #f6f6f6;
   }
   #navigation ul.nav ul {
     background: #f6f6f6;
@@ -357,8 +360,8 @@ body:after {
     color: #474747;
   }
   #navigation ul.nav ul li a:hover {
-    background-image: url("../images/45-d.png");
-    color: black;
+    background: #474747;
+    color: #fcfcfc;
   }
   #navigation ul.nav ul ul {
     left: 100%;
@@ -938,7 +941,7 @@ body:after {
     width: 67%;
     left: 17%;
     position: absolute;
-    top: 5.997em;
+    top: 8.997em;
     display: block;
   }
   .home .flexslider li.slide .slide-content header,
@@ -967,13 +970,17 @@ body:after {
   
   }
   .home .flexslider li.slide .slide-content header {
-    max-width: 42.5%;
+    max-width: 50%;
   }
   .home .flexslider li.slide .slide-content header h1 {
     color: #fff;
     margin: 0;
   }
+  .home .flexslider li.slide .slide-content .entry {
+    width: 75%;
+  }
   .home .flexslider li.slide .slide-content .entry p:last-child {
+    font-size: 1.25em;
     margin-bottom: 0;
   }
   .home #recent-products {

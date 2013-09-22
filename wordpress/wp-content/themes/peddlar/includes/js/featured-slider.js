@@ -18,4 +18,5 @@ jQuery( window ).load( function() {
         pauseOnHover: woo_localized_data.pauseOnHover, 
         pauseOnAction: woo_localized_data.pauseOnAction
    	});
+
 });
