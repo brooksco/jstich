@@ -11,6 +11,25 @@ jQuery(document).ready(function(){
 
 	jQuery('.nav-tooltip').tooltip();
 
+
+	// Check if the current screen is greater than 480px
+	// enquire.register("screen and (max-width:800px)", {
+
+	// 		match : function() {
+	// 			jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-1024x397.png");
+				
+	// 	    },      // REQUIRED
+
+	// 	    unmatch : function() {
+	// 	    	jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-invert-1024x397.png");
+	// 	    }, 
+
+	// });
+
+	
+
+
+
 	// Table alt row styling
 	jQuery( '.entry table tr:odd' ).addClass( 'alt-table-row' );
 
@@ -39,5 +58,7 @@ jQuery(document).ready(function(){
 	jQuery('.nav-toggle a').click(function(e) {
         e.preventDefault();
     });
+
+    
 
 });

@@ -50,6 +50,37 @@ woo_head();
 <?php if ( is_home() || is_front_page() ) : ?>
  
 <link rel="stylesheet" type="text/css" href="wp-content/themes/peddlar/css/homelayout.css">
+<script type="text/javascript">
+	
+	// Changing the logo needs to happen AFTER the page is finished loading
+	// document.addEventListener('DOMContentLoaded', function() {
+
+		jQuery(document).ready(function() {
+
+	enquire.register("screen and (max-width:800px)", {
+
+			// setup : function() {
+			// 	jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-1024x397.png");
+				
+			// },  
+
+			match : function() {
+				jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-1024x397.png");
+				
+		    },      // REQUIRED
+
+		    unmatch : function() {
+		    	jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-invert-1024x397.png");
+		    }, 
+
+	});
+});
+	   // your code here
+// }, false);
+
+
+
+</script>
 <!-- 
  	<style>
 
@@ -94,7 +125,21 @@ woo_head();
 	        		<?php woo_cart_link(); ?>
 	       		</nav>
 	        <?php } ?>
-			<span class="nav-toggle"><a href="#navigation"><span><?php _e( 'Navigation', 'woothemes' ); ?></span></a></span>
+			<span class="nav-toggle">
+				<!-- <hr style="color: black;
+     			background: gray; 
+    			width: 20%; 
+     			height: 2px;
+     			margin-top: 12px;
+     			float: left;"> -->
+     			<a href="#navigation"><span><?php _e( 'Navigation', 'woothemes' ); ?></span></a>
+     			<!-- <hr style="color: black;
+     			background: gray; 
+    			width: 20%; 
+     			height: 2px;
+     			margin-top: 12px;
+     			float: right;"> -->
+			</span>
 		</hgroup>
 
         <?php woo_nav_before(); ?>
