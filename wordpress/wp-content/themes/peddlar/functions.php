@@ -49,7 +49,18 @@ function load_my_scripts()
 }
 add_action( 'wp_enqueue_scripts', 'load_my_scripts' );
 
-
+if ( is_page('About') ) {
+	echo'
+            <style>
+            #sidebar {
+            	display: none;
+            }
+            #main {
+            	width: 100%;
+            }
+            </style>
+	';
+}
 
 
 

@@ -120,6 +120,18 @@ body {
 }
 
 
+/* Product pages */
+
+.woocommerce-tabs .panel {
+	background-color: #f6f6f6;
+}
+
+.woocommerce-tabs ul.tabs li.active a {
+	background-color: #f6f6f6;
+}
+
+/* End product */
+
 
 
 
