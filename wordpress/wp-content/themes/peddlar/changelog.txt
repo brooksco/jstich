@@ -1,5 +1,41 @@
 *** Peddlar Changelog ***
 
+2014.04.17 - version 1.0.11
+ * Fix - testimonials image now floats correctly to the left instead of right
+   style.less
+   style.css
+
+2014.03.19 - version 1.0.10
+ * Fix - Homepage product details now visible on hover
+   css/woocommerce.less
+   css/woocommerce.css
+
+2014.03.06 - version 1.0.9
+ * Fix - Updated fitvids to the latest stable version
+   includes/js/third-party.js
+
+2014.02.07 - version 1.0.8
+ * Fix - Product sorting on search results.
+   woocommerce/loop/orderby.php
+
+ * Tweak - Product details on hover does not display on 4/5 column layouts
+   includes/theme-woocommerce.php
+   css/woocommerce.less
+   css/woocommerce.css
+
+2013.12.24 - version 1.0.7
+ * Fix - link to get location co-ordinates for Google Maps. Fixed typo & broken help link in theme options.
+   includes/theme-options.php
+
+ * Fix - Pages are no longer hidden in search results
+   style.css
+
+ * Fix - Use of the more quicktag will now work when displaying full content on post archives
+   content.php
+
+ * Tweak - Featured images are displayed on post archives regardless of the content setting in the theme options
+   content.php
+
 2013.08.15 - version 1.0.6
  * includes/theme-woocommerce.php - woo_cart_link() now uses get_cart_contents_count(). Tweaked how styles are dequeued for WooCommerce 2.1 compatibility.
  * includes/theme-actions.php - Custom typography settings work properly for post titles.

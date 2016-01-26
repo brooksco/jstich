@@ -4,7 +4,7 @@
 
 
 	<p>
-		Crafted with care by <a href="http://colinbrooks.us">colinbrooks.us</a>
+		Crafted with care by <a href="http://colinbrooks.co">colinbrooks.co</a>
 	</p>
 
 		<p>

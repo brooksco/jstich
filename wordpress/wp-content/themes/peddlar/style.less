@@ -1,7 +1,7 @@
 /*
 Theme Name: Peddlar
 Theme URI: http://www.woothemes.com/
-Version: 1.0.6
+Version: 1.0.11
 Description: Designed by <a href="http://www.woothemes.com">WooThemes</a>.
 Author: WooThemes
 Author URI: http://www.woothemes.com
@@ -1036,6 +1036,9 @@ ul.nav { // Styles applied to all instances of navigation
 		> :not(.type-post) {
 			display: none;
 		}
+		.type-page {
+			display: block;
+		}
 	}
 }
 
@@ -1330,7 +1333,7 @@ ul.nav { // Styles applied to all instances of navigation
 }
 #sidebar .widget_woothemes_testimonials, #footer-widgets .widget_woothemes_testimonials {
 	img {
-		float: right;
+		float: left;
 		margin:0 0 1em 1em;
 		.border_radius(100%);
 	}
@@ -2059,7 +2062,7 @@ button.button,
 	box-shadow:none;
 	font-family: @sans;
 	text-shadow:none;
-	.border_radius(2px);
+	// .border_radius(2px);
 	background: @color_links;
 
 	.transition(all,ease,.3s);

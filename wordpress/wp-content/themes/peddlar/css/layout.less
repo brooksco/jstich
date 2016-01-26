@@ -85,7 +85,7 @@ INDEX
 	#top {
 	    margin: 0 -1.618em;
 	    padding:0 1.618em;
-	    border-bottom: 1px solid @bg_light - #0d0d0d;
+	    border-bottom: 1px solid @link_hover - #0d0d0d;
 	    #top-nav {
 	    	display: block;
 	    	.column(12);
@@ -94,31 +94,29 @@ INDEX
 	    	font-size:.875em; // this adjusts the scale of the entire navigation and everything just works like magic
 	    	a {
 	    		color: @color_body + #555;
-	    		font-weight: 700;
+	    		// font-weight: 700;
 	    		&:hover {
 	    			color: @color_body;
 	    		}
 	    	}
 	    	> li { // The following styles are applied ONLY to the top level list items
-	    		border-left:1px solid @bg_light - #0d0d0d;
+	    		border-left:1px solid @link_hover - #0d0d0d;
 	    		a {
 	    			&:hover {
-	    				background: @bg_light + #111;
-	    				// background-image: @hover_fabric;
+	    				background: @link_hover + #111;
 	    			}
 	    		}
 	    		&:hover {
-	    			background: @bg_light + #111;
-	    			// background-image: @hover_fabric;
+	    			background: @link_hover + #111;
 	    		}
 	    		&:last-child {
-	    			border-right:1px solid @bg_light - #0d0d0d;
+	    			border-right:1px solid @link_hover - #0d0d0d;
 	    		}
 	    	}
 	    	/* LEVEL 2 */
 	    	ul {
-	    		background: @bg_light + #111;
-	    		border:1px solid @bg_light - #0d0d0d;
+	    		background: @link_hover + #111;
+	    		border:1px solid @link_hover - #0d0d0d;
 	    		border-top:0;
 	    		left:-1px;
 	    		li {
@@ -136,28 +134,24 @@ INDEX
 	/* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
 	#navigation  {
 	    display:block !important;
-	    margin-bottom:4.236em;
-	    background: white;
+	    // margin-bottom:4.236em;
+
 	    ul.nav {
 	    	> li { // The following styles are applied ONLY to the top level list items
 	    		> a {
 	    			padding:1.416em;
 	    			color: @color_body;
-	    			font-weight: 700;
+	    			// font-weight: 700;
 	    			&:hover {
-	    				// background: @bg_light - #060606;
-	    				// background: white;
-	    				// background-image: @hover_fabric;
+	    				background: @link_hover - #060606;
 	    				color: @color_body - #222;
 	    				.inset_box_shadow(0,.207em,0,0,@color_links);
 	    			}
 	    		}
 	    		&:hover {
-	    			background: @bg_light - #060606;
+	    			background: @link_hover - #060606;
 	    			> a {
-	    				// this is the main hover behavior
-	    				background: @bg_light - #060606;
-	    				// background-image: @hover_fabric;
+	    				background: @link_hover - #060606;
 	    				color: @color_body - #222;
 	    				.inset_box_shadow(0,.207em,0,0,@color_links);
 	    			}
@@ -165,25 +159,21 @@ INDEX
 	    	}
 	    	> li.current_page_item, li.current_page_parent, /*li.current-menu-ancestor, */li.current-cat, li.current-menu-item {
 	    		> a {
-	    			// background: @bg_light;
-	    			background: white;
-	    			// background-image: @hover_fabric;
+	    			// background: @link_hover;
     				color: @color_body - #222;
     				.inset_box_shadow(0,.207em,0,0,@color_body);
     				&:hover {
-    					background: @bg_light - #060606;;
-    					// background-image: @hover_fabric;
+    					background: @link_hover - #060606;;
     				}
 	    		}
 	    		&:hover > a {
-	    			background:@bg_light - #060606;
-	    			// background-image: @hover_fabric;
+	    			background:@link_hover - #060606;
 	    		}
 	    	}
 
 	    	/* LEVEL 2 */
 	    	ul {
-	    		background: @bg_light - #060606;
+	    		background: @link_hover - #060606;
 	    		padding:1em 0;
 	    		left:0;
 	    		li {
@@ -192,12 +182,10 @@ INDEX
 	    				padding:.618em 1.416em;
 	    				font-weight: normal;
 	    				color: @color_body;
-	    				// background: @bg_light - #060606;
+	    				background: @link_hover - #060606;
 	    				&:hover {
 	    					background: @color_body;
-	    					// background-image: @hover_fabric_dark;
-	    					color: @bg_light;
-	    					// color: black;
+	    					color: @link_hover;
 	    				}
 	    			}
 	    		}
@@ -241,8 +229,8 @@ INDEX
 		}
 	}
 	#header {
-		padding-top:1.618em;
-		padding-bottom:1.618em;
+		padding-top: 0em;
+		padding-bottom: 1.25em;
 		padding-left:0;
 		padding-right:0;
 		background: none;
@@ -254,6 +242,8 @@ INDEX
 	    }
 	    #logo {
 	    	margin:1.618em 0 0 0;
+	    	// max-width: 200px;
+
 	    }
 	    .site-description {
 	    	margin:0 0 1.618em;
@@ -274,11 +264,20 @@ INDEX
 	        }
 	    }
 	}
+	// - colin main edits here
 	#navigation {
 		margin-left:-1.618em;
 		margin-right:-1.618em;
 		padding:0;
-		line-height: 1.2;
+		line-height: 1;
+		margin-bottom: 1.25em;
+		// height: 40px;
+		font-size: 16px;
+
+		background: none;
+		border: 1px solid @bg_mediumer;
+		// @tan
+
 		#main-nav {
 			.column(9);
 			width:auto;
@@ -294,6 +293,10 @@ INDEX
 			}
 		}
 		ul {
+			// - colin
+			font-size: 13px;
+			font-family: @sans;
+			font-weight: lighter;
 			ul.sub-menu {
 				margin-left:0;
 			}
@@ -303,7 +306,9 @@ INDEX
 		.column(12);
 	}
 	#main {
-	    .column(8);
+	    // .column(8);
+	    // full width always -colin
+	    .column(12);
 	}
 	#main.fullwidth, .layout-full #main, #main.full-width /*.col-full*/ {
 	    .column(12);
@@ -557,6 +562,9 @@ INDEX
 
 	#footer {
 
+		// background: none;
+		// border: 2px solid @bg_light;
+
 		.col-left, .col-right {
 			.column(6);
 		}
@@ -568,15 +576,13 @@ INDEX
 	/* Homepage */
 	.home {
 		.flexslider {
-			margin-top:-4.236em;
+			// margin-top:-4.236em;
 			li.slide {
 				.slide-content {
 					width:67%;
-					// width:100%;
 					left:17%;
 					position:absolute;
-					// top:5.997em;
-					top:8.997em;
+					top:5.997em;
 					display: block;
 					header, .entry {
 						.column(8);
@@ -589,17 +595,14 @@ INDEX
 					}
 					header {
 
-						// max-width:42.5%;
-						max-width: 66%;
+						max-width:42.5%;
 						h1 {
 							color: #fff;
 							margin:0;
 						}
 					}
 					.entry {
-						width:75%;
 						p:last-child {
-							font-size: 1.25em;
 							margin-bottom:0;
 						}
 					}
@@ -607,6 +610,10 @@ INDEX
 			}
 		}
 		#recent-products {
+
+			h2 {
+				font-family: @serif;
+			}
 			.column(12);
 		}
 	}

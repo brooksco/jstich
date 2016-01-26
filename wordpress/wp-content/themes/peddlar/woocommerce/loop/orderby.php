@@ -17,6 +17,14 @@ if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() )
 <form class="woocommerce-ordering" method="get">
 	<ul>
 		<?php
+			$search_query = get_search_query();
+
+			if ( $search_query ) {
+				$search_string = '&s=' . $search_query . '&post_type=product';
+			} else {
+				$search_string = null;
+			}
+
 			$catalog_orderby = apply_filters( 'woocommerce_catalog_orderby', array(
 				'menu_order' => __( 'Default sorting', 'woocommerce' ),
 				'popularity' => __( 'Popularity', 'woocommerce' ),
@@ -31,7 +39,7 @@ if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() )
 
 			foreach ($catalog_orderby as $id => $name){
 		  		$selected = str_replace( "='selected'", "", selected( $orderby, $id, false ));
-		    	echo '<li class="'.$selected.'"><a href="'.home_url($wp->request).'?orderby='.$id.'">'.$name.'</a></li>';
+		    	echo '<li class="' . $selected . '"><a href="?orderby=' . $id . $search_string . '">' . $name . '</a></li>';
 		  	}
 		?>
 	<?php

@@ -39,28 +39,9 @@ if ( is_woocommerce_activated() ) {
 
 
 
-function load_my_scripts()
-{
 
-    wp_register_script('myscript', get_template_directory_uri().'/includes/js/bootstrap.js', array('jquery') );  
-    wp_enqueue_script('myscript');  
 
-	wp_enqueue_script( 'enquire', get_template_directory_uri().'/includes/js/enquire.min.js' );
-}
-add_action( 'wp_enqueue_scripts', 'load_my_scripts' );
 
-if ( is_page('About') ) {
-	echo'
-            <style>
-            #sidebar {
-            	display: none;
-            }
-            #main {
-            	width: 100%;
-            }
-            </style>
-	';
-}
 
 
 

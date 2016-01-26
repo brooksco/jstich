@@ -42,9 +42,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             
             <?php
             	// Determine wether or not to display comments here, based on "Theme Options".
-            	// if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) ) {
-            	// 	comments_template();
-            	// }
+            	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'page', 'both' ) ) ) {
+            		comments_template();
+            	}
 
 				} // End WHILE Loop
 			} else {
@@ -58,9 +58,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		
 		<?php woo_main_after(); ?>
 
-
-        <?php get_sidebar(); ?>
-        
+<!-- no sidebar for now, - colin -->
+        <?php //get_sidebar(); ?>
 
     </div><!-- /#content -->
 		

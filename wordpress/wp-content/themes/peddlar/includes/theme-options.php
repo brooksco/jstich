@@ -975,13 +975,13 @@ $options[] = array( 'name' => __( 'WP Post Thumbnail - Hard Crop', 'woothemes' )
     				'type' => 'checkbox' );
 
 $options[] = array( 'name' => __( 'TimThumb', 'woothemes' ),
-					"desc" => __( 'This will enable the <a href="http://code.google.com/p/timthumb/">TimThumb</a> (thumb.php) script which dynamically resizes images added through the <strong>custom settings panel</strong>  below the post editor. Make sure your themes <em>cache</em> folder is writable. <a href="http://www.woothemes.com/2008/10/troubleshooting-image-resizer-thumbphp/">Need help?</a>', 'woothemes' ),
+					"desc" => __( 'This will enable the <a href="http://code.google.com/p/timthumb/">TimThumb</a> (thumb.php) script which dynamically resizes images added through the <strong>custom settings panel</strong>  below the post editor. Make sure your themes <em>cache</em> folder is writable. <a href="http://docs.woothemes.com/document/docs-featured-images/">Need help?</a>', 'woothemes' ),
     				'id' => $shortname . '_resize',
     				'std' => 'true',
     				'type' => 'checkbox' );
 
 $options[] = array( 'name' => __( 'Automatic Image Thumbnail', 'woothemes' ),
-    				'desc' => __( 'If no thumbnail is specifified then the first uploaded image in the post is used.', 'woothemes' ),
+    				'desc' => __( 'If no thumbnail is specified then the first uploaded image in the post is used.', 'woothemes' ),
     				'id' => $shortname . '_auto_img',
     				'std' => 'false',
     				'type' => 'checkbox' );
@@ -1325,7 +1325,7 @@ $options[] = array( 'name' => __( 'Maps', 'woothemes' ),
 					'type' => 'subheading');
 
 $options[] = array( 'name' => __( 'Contact Form Google Maps Coordinates', 'woothemes' ),
-					'desc' => sprintf( __( 'Enter your Google Map coordinates to display a map on the Contact Form page template and a link to it on the Contact Us widget. You can get these details from %1$s', 'woothemes' ), '<a href="http://www.getlatlon.com/" target="_blank">Google Maps</a>' ),
+					'desc' => sprintf( __( 'Enter your Google Map coordinates to display a map on the Contact Form page template and a link to it on the Contact Us widget. You can get these details from %1$s', 'woothemes' ), '<a href="http://itouchmap.com/latlong.html" target="_blank">Google Maps</a>' ),
 					'id' => $shortname . '_contactform_map_coords',
 					'std' => '',
 					'type' => 'text' );

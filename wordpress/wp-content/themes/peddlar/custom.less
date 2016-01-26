@@ -1,0 +1,218 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. */
+
+
+/* 
+GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+@import url(css/mixins.less);
+
+
+body {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: @serif;
+	font-size: 15px;
+}
+
+// h1 {
+// 	font-weight: lighter !important;
+// }
+
+.form-row {
+	margin-bottom: 1em;
+	.input-text {
+		border: 1px solid @bg_dark !important;
+		padding: .5em .5em !important;
+	}
+}
+
+#navigation {
+	.widget_product_search {
+		width: auto;
+		margin-right: 0;
+		font-family: @sans;
+		font-weight: lighter;
+		font-size: 13px;
+
+		input#s {
+			margin-right: 2.5em;
+		}
+
+	}
+}
+
+
+// Header cart
+
+#header .cart-contents span.price {
+	font-size: 20px;
+}
+
+#header .cart-contents:before {
+	padding: 12px;
+}
+
+#header hgroup nav.cart {
+	padding-top: 0;
+}
+
+// end header cart
+
+
+.shipping-calculator-button {
+	font-size: 16px;
+}
+
+#order_review {
+	// width: 50%;
+}
+
+.login {
+	width: 50%;
+}
+
+#payment {
+	width: 50%;
+}
+
+.amount {
+	font-weight: lighter;
+}
+
+.home {
+	.homepage-area {
+		#recent-products {
+
+			h2 {
+				text-transform: none !important;
+			}
+
+			&:first-child {
+				padding-top: 4em;
+			}
+		}
+	}
+}
+
+
+
+// .product_title {
+// 	font-weight: lighter;
+// }
+
+h1, .alpha {
+	font-size: 2em;
+}
+
+#header {
+	padding-top: 0em;
+	padding-bottom: 1.25em;
+
+	.nav-toggle {
+		background: none;
+		border: 2px solid @bg_light;
+		padding:1em 1em;
+	}
+
+	#logo {
+		max-width: 180px;
+		margin-top: 1.5em;
+	}
+}
+
+.nav-toggle {
+	a {
+		span {
+			text-transform: none;
+			font-family: @sans;
+		}
+	}
+}
+
+
+
+#footer {
+	background: none;
+	border: 1px solid @bg_mediumer;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-bottom: 4em;
+
+	font-family: @sans;
+
+	p {
+		color: @bg_darker;
+		font-size: 11px;
+	}
+
+	a {
+		color: @bg_darker;
+	}
+
+	#copyright {
+		float: right;
+	}
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+	#header {
+		padding-bottom: 0;
+	}
+
+	#main {
+		margin-top: 1em;
+	}
+
+	#navigation {
+		background: @bg_light;
+		padding-top: .5em;
+		padding-bottom: .75em;
+	}
+
+	#main-nav {
+		.page_item {
+			a {
+				font-family: @sans;
+				color: @blue_dark;
+			}
+		}
+	}
+
+	.widget_product_search {
+		display: none;
+	}
+
+	#header .site-description + .nav.cart {
+		float: right;
+		margin-top: -5em;
+
+		.price, .contents {
+			display: none;
+		}
+
+	}
+
+}
+
+
+/* 
+DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go here */
+}

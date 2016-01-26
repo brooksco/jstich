@@ -400,6 +400,7 @@ ul.woocommerce-error, ul.woocommerce_error {
 }
 .quantity {
 	position: relative;
+	height: 42px;
 	width:4.236em;
 	/* Disable input[type=number] buttons until the world is ready */
 	input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
@@ -407,6 +408,8 @@ ul.woocommerce-error, ul.woocommerce_error {
 	}
 	.qty {
 		.borderbox;
+		height: 42px;
+		padding-top: 11px;
 		width:4.236em;
 		background: @color_body;
 		color: @bg_light;
@@ -599,7 +602,7 @@ ul.products {
 	}
 	.images {
 		img {
-			width:100%;
+			max-width:100%;
 			height: auto;
 			margin-bottom:1em;
 		}
@@ -867,6 +870,7 @@ table.cart  {
 // Checkout
 #payment {
 	border:1px solid @border_main;
+	// width: 50%;
 	.clearfix;
 	.border_radius(.327em);
 	.create-account {
@@ -950,13 +954,40 @@ table.cart  {
 		width:100%;
 		.borderbox;
 		.button {
-			font-size: 1.387em;
+			// font-size: 1.387em;
+			font-size: 1.2em;
 			width: 100%;
 		}
 	}
 }
 
 @media only screen and (min-width: 800px) {
+
+	.woocommerce-columns-4,
+	.woocommerce-columns-5 {
+		ul.products {
+			li.product {
+				&:hover {
+					.product-details {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.home .woocommerce-columns-4,
+	.home .woocommerce-columns-5 {
+		ul.products {
+			li.product {
+				&:hover {
+					.product-details {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 
 	#header {
 		position: relative;
@@ -972,8 +1003,7 @@ table.cart  {
 			text-align: right;
 			width:20.833333333333336%;
 			position: absolute;
-			top: 2.75em;
-			// top:1.618em;
+			top:1.618em;
 			right:0;
 			color: @color_body;
 			span.price {
@@ -1036,7 +1066,7 @@ table.cart  {
 	.form-row {
 		width:48%;
 		float: left;
-		margin-bottom:2.053em;
+		margin-bottom:1em;
 
 		label {
 			display: block;
@@ -1142,7 +1172,7 @@ table.cart  {
 			}
 			h1.page-title {
 				font-size:1em;
-				text-transform: uppercase;
+				// text-transform: uppercase;
 				text-align: center;
 			}
 		}
@@ -1366,11 +1396,6 @@ table.cart  {
 					.column(2,8);
 					&.first {
 						clear:both;
-					}
-					&:hover {
-						.product-details {
-							display: none;
-						}
 					}
 				}
 			}

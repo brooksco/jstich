@@ -5,16 +5,31 @@
 @color_links:       #77CB6D;        // Links / Main theme colour
 @color_body:        #474747;        // Body Copy
 @border_main:       #e6e6e6;        // The 1px grey rules used throughout the WF
-// @bg_light:          #f7f7f7;
-@bg_light:          #FCFCFC;
+@bg_light:          #f7f7f7;
+@bg_medium:         #ededed;
+@bg_mediumer:       #e3e3e3;
 @bg_dark:           #d3d3d3;
+@bg_darker:         #858585;
 @success:           #77CB6D;
 @info:              #6c98c9;
 @error:             #db767b;
 
+@tan:               #FAF6DB;
+@tan_dark:          #e7d451;
+@blue:              #80c3d8;
+@blue_dark:         #44a6c6;
+@link_hover:        @bg_light;
+@color_links:       @blue;
+// @bg_light:          @tan;
+
 // Fonts
-@sans:              "Lato", sans-serif;
-@serif:             Georgia, serif;
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+
+
+@sans:              "PT Mono", sans-serif;
+@serif:             "PT Serif", serif;
 
 // Google fonts - These are also defined in Theme Setup (theme-actions.php)
 @sans_google:       "Droid Sans", sans-serif;
@@ -23,12 +38,6 @@
 // Paths
 @imagepath:         'images';
 @fontpath:          'includes/fonts/';
-
-// Custom
-@hover_fabric:      url("../images/45.png");
-@hover_fabric_dark: url("../images/45-d.png");
-@fabric:            url("../images/45-l.png");
-
 
 /**
  * Functions
@@ -67,41 +76,46 @@
 	}
 }
 .border_radius(@radius:3px) {
-    -webkit-border-radius:@radius;
-    border-radius:@radius;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    // -webkit-border-radius:@radius;
+    // border-radius:@radius;
+    // -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    border-radius: 0;
 }
 
 .border_radius_right(@radius:3px) {
-    -webkit-border-top-right-radius: @radius;
-    -webkit-border-bottom-right-radius: @radius;
-    border-top-right-radius: @radius;
-    border-bottom-right-radius: @radius;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    // -webkit-border-top-right-radius: @radius;
+    // -webkit-border-bottom-right-radius: @radius;
+    // border-top-right-radius: @radius;
+    // border-bottom-right-radius: @radius;
+    // -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    border-radius: 0;
 }
 
 .border_radius_left(@radius:3px) {
-    -webkit-border-top-left-radius: @radius;
-    -webkit-border-bottom-left-radius: @radius;
-    border-top-left-radius: @radius;
-    border-bottom-left-radius: @radius;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    // -webkit-border-top-left-radius: @radius;
+    // -webkit-border-bottom-left-radius: @radius;
+    // border-top-left-radius: @radius;
+    // border-bottom-left-radius: @radius;
+    // -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    border-radius: 0;
 }
 
 .border_radius_bottom(@radius:3px) {
-    -webkit-border-bottom-left-radius: @radius;
-    -webkit-border-bottom-right-radius: @radius;
-    border-bottom-left-radius: @radius;
-    border-bottom-right-radius: @radius;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    // -webkit-border-bottom-left-radius: @radius;
+    // -webkit-border-bottom-right-radius: @radius;
+    // border-bottom-left-radius: @radius;
+    // border-bottom-right-radius: @radius;
+    // -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    border-radius: 0;
 }
 
 .border_radius_top(@radius:3px) {
-    -webkit-border-top-left-radius: @radius;
-    -webkit-border-top-right-radius: @radius;
-    border-top-left-radius: @radius;
-    border-top-right-radius: @radius;
-    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    // -webkit-border-top-left-radius: @radius;
+    // -webkit-border-top-right-radius: @radius;
+    // border-top-left-radius: @radius;
+    // border-top-right-radius: @radius;
+    // -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    border-radius: 0;
 }
 
 .border_radius_reset()  {

@@ -54,6 +54,20 @@ if ( ! function_exists( 'wooframework_loop_columns' ) ) {
 	} // End wooframework_loop_columns()
 }
 
+// Add column body class
+add_filter( 'body_class', 'woo_wc_column_body_class' );
+function woo_wc_column_body_class( $classes ) {
+	global $woo_options;
+
+	if ( ! isset( $woo_options['woocommerce_product_columns'] ) ) {
+		$classes[] = 'woocommerce-columns-3';
+	} else {
+		$classes[] = 'woocommerce-columns-' . ( $woo_options['woocommerce_product_columns'] + 2 );
+	}
+
+	return $classes;
+}
+
 // Number of products per page
 add_filter( 'loop_shop_per_page', 'wooframework_products_per_page' );
 

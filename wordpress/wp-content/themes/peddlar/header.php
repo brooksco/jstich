@@ -46,157 +46,11 @@ woo_head();
 <body <?php body_class(); ?>>
 <?php woo_top(); ?>
 
-
-<?php if ( is_home() || is_front_page() ) : ?>
- 
-<link rel="stylesheet" type="text/css" href="wp-content/themes/peddlar/css/homelayout.css">
-<script type="text/javascript">
-	
-	// Changing the logo needs to happen AFTER the page is finished loading
-	// document.addEventListener('DOMContentLoaded', function() {
-
-		jQuery(document).ready(function() {
-
-	enquire.register("screen and (max-width:800px)", {
-
-			// setup : function() {
-			// 	jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-1024x397.png");
-				
-			// },  
-
-			match : function() {
-				jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-1024x397.png");
-				
-		    },      // REQUIRED
-
-		    unmatch : function() {
-		    	jQuery('#logo').find("img").attr("src","http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-invert-1024x397.png");
-		    }, 
-
-	});
-});
-	   // your code here
-// }, false);
-
-
-
-</script>
-<!-- 
- 	<style>
-
-		#logo >img {
-
-		}
-
-		#navigation ul.nav > li > a {
-			color: white;
-			font-weight: 700;
-			}
-
-
-		.home .flexslider li.slide .slide-content {
-			margin-top: 5em;
-		}
-
-	</style>
- -->
-
-
-
-
-<div id="head-wrapper">
 <div class="wrapper">
 
     <?php woo_header_before(); ?>
 
 	<header id="header" class="col-full">
-		<!-- 
-		<?php woo_header_inside(); ?>
- -->
- 		<a id="logo" href="http://localhost/jstitch/wordpress/" title="">
-		<img src="http://localhost/jstitch/wordpress/wp-content/uploads/2013/09/Jstitch-2-invert-1024x397.png" alt="jstitch">
-		</a>
-
-	    <hgroup>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			<?php if ( is_woocommerce_activated() && isset( $woo_options['woocommerce_header_cart_link'] ) && 'true' == $woo_options['woocommerce_header_cart_link'] ) { ?>
-	        	<nav class="nav cart">
-	        		<?php woo_cart_link(); ?>
-	       		</nav>
-	        <?php } ?>
-			<span class="nav-toggle">
-				<!-- <hr style="color: black;
-     			background: gray; 
-    			width: 20%; 
-     			height: 2px;
-     			margin-top: 12px;
-     			float: left;"> -->
-     			<a href="#navigation"><span><?php _e( 'Navigation', 'woothemes' ); ?></span></a>
-     			<!-- <hr style="color: black;
-     			background: gray; 
-    			width: 20%; 
-     			height: 2px;
-     			margin-top: 12px;
-     			float: right;"> -->
-			</span>
-		</hgroup>
-
-        <?php woo_nav_before(); ?>
-
-	</header><!-- /#header -->
-
-</div><!--/.wrapper-->
-</div>
-<nav id="navigation" class="col-full" role="navigation">
-
-	<div class="main-nav-inner">
-
-		<?php
-		if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
-			wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'main-nav', 'menu_class' => 'nav', 'theme_location' => 'primary-menu' ) );
-		} else {
-		?>
-	    <ul id="main-nav" class="nav">
-			<?php if ( is_page() ) $highlight = 'page_item'; else $highlight = 'page_item current_page_item'; ?>
-			<!-- <li class="<?php echo $highlight; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'woothemes' ); ?></a></li> -->
-			<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=6' ); ?>
-
-			<!-- php wp_list_pages(array('title_li' => '', 'exclude' => '5, 6, 9, 13, 14')); -->
-		</ul><!-- /#nav -->
-	    <?php } ?>
-
-	    <?php woo_nav_after(); ?>
-
-	</div><!--/.main-nav-inner-->
-
-</nav><!-- /#navigation -->
-
-<?php woo_content_before(); ?>
-
-<div class="wrapper">
-
-
-
-
-
-
-
-<?php else : ?>
-
-
-
-
-
-
-
-<div id="head-wrapper">
-<div class="wrapper">
-
-    <?php woo_header_before(); ?>
-
-	<header id="header" class="col-full">
-		
 		<?php woo_header_inside(); ?>
 
 	    <hgroup>
@@ -215,7 +69,7 @@ woo_head();
 	</header><!-- /#header -->
 
 </div><!--/.wrapper-->
-</div>
+
 <nav id="navigation" class="col-full" role="navigation">
 
 	<div class="main-nav-inner">
@@ -227,10 +81,8 @@ woo_head();
 		?>
 	    <ul id="main-nav" class="nav">
 			<?php if ( is_page() ) $highlight = 'page_item'; else $highlight = 'page_item current_page_item'; ?>
-			<!-- <li class="<?php echo $highlight; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'woothemes' ); ?></a></li> -->
-			<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=6' ); ?>
-
-			<!-- php wp_list_pages(array('title_li' => '', 'exclude' => '5, 6, 9, 13, 14')); -->
+			<li class="<?php echo $highlight; ?>"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e( 'Home', 'woothemes' ); ?></a></li>
+			<?php wp_list_pages( 'sort_column=menu_order&depth=6&title_li=&exclude=' ); ?>
 		</ul><!-- /#nav -->
 	    <?php } ?>
 
@@ -243,9 +95,3 @@ woo_head();
 <?php woo_content_before(); ?>
 
 <div class="wrapper">
-
-
-
-
-
-<?php endif ?>
